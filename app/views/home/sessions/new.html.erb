@@ -1,0 +1,23 @@
+<h1>sign in</h1>
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= form_with url: sign_in_path do |form| %>
+<div class="mb-3">
+<%= form.text_field :email, class: "form-control", placeholder: "ella@bella.com" %>
+</div>
+
+<div class="mb-3">
+<%= form.password_field :password, class: "form-control", placeholder: "mella is a password" %>
+</div>
+
+
+<div class="mb-3">
+<%= form.submit "sign in", class: "btn btn-primary" %>
+</div>
+
+
+<% end %>

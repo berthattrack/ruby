@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <h1>Calculate BMI</h1>
+    <form action="calculate" method="POST">
+      <label for="weight">Weight (kg):</label>
+      <input type="text" name="weight" id="weight" />
+      <br />
+      <label for="height">Height (cm):</label>
+      <input type="text" name="height" id="height" />
+      <br />
+      <input type="submit" value="Calculate" />
+    </form>
+    
+    <% if params[:weight] && params[:height] %>
+      <% weight = params[:weight].to_f %>
+      <% height = params[:height].to_f %>
+      <% bmi = weight / ((height / 100) ** 2) %>
+      <h2>Your BMI: <%= bmi.round(2) %></h2>
+    <% end %>
+
+
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+# bmi calculator
+puts " BMI categories"
+puts "severe thin <16"
+puts "moderate ok 16-17 "
+puts "normal 17-25"
+puts "overweight 25-30"
+puts "obese >30"
+
+print " height "
+height = gets.chomp.to_f
+print "weight"
+weight = gets.chomp.to_f
+bmi = weight / (height/100)**2
+puts "BMI = #{bmi}"
